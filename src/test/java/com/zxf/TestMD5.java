@@ -1,5 +1,6 @@
 package com.zxf;
 
+
 import org.apache.shiro.crypto.hash.Md5Hash;
 
 public class TestMD5 {

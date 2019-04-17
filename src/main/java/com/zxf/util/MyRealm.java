@@ -11,6 +11,7 @@ import org.apache.shiro.authz.permission.DomainPermission;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.realm.SimpleAccountRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class MyRealm extends AuthorizingRealm {
         a.setA_name(username);
         Admin admin = adminService.login(username,null);
         System.out.println(admin+"=================");*/
-        AuthenticationInfo authenticationInfo = new SimpleAccount("admin","admin",getName());
+        AuthenticationInfo authenticationInfo = new SimpleAccount("admin","9898247bfac3a524680145b3b5e203d3", ByteSource.Util.bytes("abcd"),getName());
         return authenticationInfo;
     }
     @Override
